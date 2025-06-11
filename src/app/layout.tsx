@@ -26,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en"  suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
           <div className="flex-col overflow-x-hidden bg-[#121417] font-[\'Space_Grotesk\',_\'Noto_Sans\',sans-serif] text-white px-4 md:px-8 lg:16">
             <Header />
-            <main className="relative flex min-h-screen ">{children}</main>
+            <main className="relative flex min-h-screen mt-12">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
