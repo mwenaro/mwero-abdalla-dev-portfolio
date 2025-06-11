@@ -136,7 +136,7 @@ export default function AboutPage() {
 
           {/* Call to Action */}
           <section className="p-6 bg-[#1e2227] rounded-lg mt-8">
-            <h3 className="text-white text-xl font-bold mb-4">Let's Work Together</h3>
+            <h3 className="text-white text-xl font-bold mb-4">Let&apos;sWork Together</h3>
             <p className="text-[#a1abb5] mb-6">
               Interested in collaborating or have a project in mind? I&apos;m always open to discussing new opportunities.
             </p>
