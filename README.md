@@ -1,4 +1,4 @@
-# Mwero Abdalla - Full Stack Developer Portfolio
+# Mwero Abdalla - Full Stack Developer 
 
 ![Portfolio Screenshot](/public/mwero-passport.png)
 
@@ -42,8 +42,8 @@ This is the professional portfolio of Mwero Abdalla, showcasing skills, projects
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mwenaro/mwero-abdalla-fullstack-portfolio.git
-   cd mwero-abdalla-fullstack-portfolio
+   git clone https://github.com/mwenaro/mwero-abdalla-dev-portfolio.git
+   cd mwero-abdalla-dev-portfolio
    ```
 
 2. Install dependencies:
