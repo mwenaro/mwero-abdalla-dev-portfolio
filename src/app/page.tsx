@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 
 export default function HomePage() {
   return (
@@ -33,7 +33,7 @@ export default function HomePage() {
             About Me
           </h2>
           <p className="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
-            I'm a full-stack developer with a passion for creating innovative
+            I&apos;m a full-stack developer with a passion for creating innovative
             and user-friendly web applications. With a strong foundation in both
             front-end and back-end technologies, I enjoy tackling complex
             challenges and delivering high-quality solutions. My goal is to

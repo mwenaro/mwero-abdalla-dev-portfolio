@@ -12,7 +12,7 @@ export default function AboutPage() {
                 About Me
               </p>
               <p className="text-[#a1abb5] text-sm font-normal leading-normal">
-                I'm a full-stack developer with a passion for creating
+                I&apos;m a full-stack developer with a passion for creating
                 innovative and user-friendly web applications. With a strong
                 foundation in both front-end and back-end technologies, I bring
                 a holistic approach to software development, ensuring seamless
