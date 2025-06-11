@@ -100,7 +100,7 @@ export default function HomePage() {
             </h2>
             <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                I'm a full-stack developer with a passion for creating innovative and user-friendly web applications. 
+                I&apos;m a full-stack developer with a passion for creating innovative and user-friendly web applications. 
                 With expertise in both front-end and back-end technologies, I specialize in building performant, 
                 scalable solutions that deliver exceptional user experiences. My approach combines clean code, 
                 thoughtful architecture, and attention to detail to create products that people love to use.
@@ -170,7 +170,7 @@ export default function HomePage() {
               Interested in working together?
             </h3>
             <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              I'm currently available for freelance work and full-time positions.
+              I&apos;m currently available for freelance work and full-time positions.
             </p>
             <Link
               href="/contact" 
