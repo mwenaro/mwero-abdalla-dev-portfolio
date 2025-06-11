@@ -77,7 +77,7 @@ export default function ContactPage() {
         <section className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-[#a1abb5] max-w-2xl">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions. Feel free to reach out!
           </p>
         </section>

@@ -17,7 +17,7 @@ export default function AboutPage() {
               About Me
             </h1>
             <p className="text-[#a1abb5] text-base md:text-lg leading-relaxed">
-              I'm a full-stack developer with 8+ years of experience creating innovative 
+              I&apos;m a full-stack developer with 8+ years of experience creating innovative 
               and user-friendly web applications. With expertise in both front-end and 
               back-end technologies, I specialize in building performant, scalable 
               solutions that deliver exceptional user experiences.
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <section className="p-6 bg-[#1e2227] rounded-lg mt-8">
             <h3 className="text-white text-xl font-bold mb-4">Let's Work Together</h3>
             <p className="text-[#a1abb5] mb-6">
-              Interested in collaborating or have a project in mind? I'm always open to discussing new opportunities.
+              Interested in collaborating or have a project in mind? I&apos;m always open to discussing new opportunities.
             </p>
             <Link 
               href="/contact" 
