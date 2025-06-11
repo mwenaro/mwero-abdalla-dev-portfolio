@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mwero Abdalla - Full Stack Developer Portfolio
 
-## Getting Started
+![Portfolio Screenshot](/public/mwero-passport.png)
 
-First, run the development server:
+## 📝 Overview
+
+This is the professional portfolio of Mwero Abdalla, showcasing skills, projects, and contact information. Built with Next.js, React, and Tailwind CSS, this portfolio features a modern, responsive design with dark/light mode support.
+
+## ✨ Features
+
+- **Modern UI**: Clean, professional design with smooth animations
+- **Responsive**: Fully responsive across all device sizes
+- **Dark/Light Mode**: Theme toggle with `next-themes`
+- **Project Showcase**: Detailed project pages with screenshots
+- **Skills Section**: Organized technical skills display
+- **Contact Form**: With validation and Calendly integration
+- **Performance Optimized**: Fast loading with Next.js
+
+## 🛠️ Technologies Used
+
+- **Frontend**: 
+  - Next.js 15
+  - React 19
+  - Tailwind CSS
+  - Radix UI components
+- **Tools**:
+  - TypeScript
+  - ESLint
+  - Prettier
+- **Integrations**:
+  - Calendly for scheduling
+  - React Icons
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mwenaro/mwero-abdalla-fullstack-portfolio.git
+   cd mwero-abdalla-fullstack-portfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+mwero-abdalla-fullstack-portfolio/
+├── app/
+│   ├── about/
+│   ├── contact/
+│   ├── projects/
+│   │   ├── [id]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── skills/
+│   └── layout.tsx
+├── components/
+│   ├── ui/
+│   └── ...
+├── public/
+│   ├── images/
+│   └── ...
+├── styles/
+└── ...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Configuration
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file in the root directory with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+NEXT_PUBLIC_CALENDLY_URL=your_calendly_url
+# Add other environment variables as needed
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Customizing
 
-## Deploy on Vercel
+1. **Content**: Update project data in `/data/projects.ts`
+2. **Styling**: Modify Tailwind config in `tailwind.config.ts`
+3. **Themes**: Adjust color schemes in `globals.css`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📬 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: [mweroabdalla@gmail.com](mailto:mweroabdalla@gmail.com)
+- **GitHub**: [mwenaro](https://github.com/mwenaro)
+- **Portfolio**: [https://mwero-abdalla-dev.vercel.app](https://mwero-abdalla-dev.vercel.app) 
+
+## 🤝 Contributing
+
+While this is a personal portfolio, suggestions and improvements are welcome:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for utility-first styling
+- React Icons for the comprehensive icon set
+- All open-source contributors whose work made this possible
+
+---
+
+**Mwero Abdalla** - Full Stack Developer  
+📍 Based in Mombasa, Kenya  
+💼 Available for freelance work and full-time positions
