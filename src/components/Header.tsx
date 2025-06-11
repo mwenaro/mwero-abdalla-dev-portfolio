@@ -77,7 +77,7 @@ export function Header() {
             {/* Resume Button */}
             <Button
               className="bg-[#327fcc] hover:bg-[#3a8cd6] text-white ml-4"
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              onClick={() => window.open("/Mwero_Abdalla_Resume.pdf", "_blank")}
             >
               Resume
             </Button>
