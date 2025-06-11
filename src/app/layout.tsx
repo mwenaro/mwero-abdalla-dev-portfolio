@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
+// import { ThemeProvider } from "@/components/ThemeProvider";
 
 
 
@@ -32,13 +32,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>
+        {/* <ThemeProvider> */}
           <div className="flex-col overflow-x-hidden bg-[#121417] font-[\'Space_Grotesk\',_\'Noto_Sans\',sans-serif] text-white px-4 md:px-8 lg:16">
             <Header />
             <main className="relative flex min-h-screen mt-12">{children}</main>
             <Footer />
           </div>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
