@@ -1,4 +1,7 @@
 "use client"
+
+import { Button } from "@/components/ui/button";
+
 export default function ContactPage() {
   return (
     <div className="px-40 flex flex-1 justify-center py-5">
@@ -9,7 +12,7 @@ export default function ContactPage() {
               Get in Touch
             </p>
             <p className="text-[#a1abb5] text-sm font-normal leading-normal">
-              I'm always open to discussing new projects, creative ideas, or
+              I&apos;m always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions. Feel free to reach out!
             </p>
           </div>
@@ -65,9 +68,9 @@ export default function ContactPage() {
           </label>
         </div>
         <div className="flex px-4 py-3 justify-start">
-          <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#327fcc] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+          <Button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#327fcc] text-white text-sm font-bold leading-normal tracking-[0.015em]">
             <span className="truncate">Send Message</span>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

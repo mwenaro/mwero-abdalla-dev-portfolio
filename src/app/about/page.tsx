@@ -8,11 +8,11 @@ export default function AboutPage() {
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           <div className="flex flex-wrap justify-between gap-3 p-4">
             <div className="flex min-w-72 flex-col gap-3">
-              <p className="text-white tracking-light text-[32px] font-bold leading-tight">
+              <h2 className="text-white tracking-light text-[32px] font-bold leading-tight">
                 About Me
-              </p>
+              </h2>
               <p className="text-[#a1abb5] text-sm font-normal leading-normal">
-                I'm a full-stack developer with a passion for creating
+                I&apos;m a full-stack developer with a passion for creating
                 innovative and user-friendly web applications. With a strong
                 foundation in both front-end and back-end technologies, I bring
                 a holistic approach to software development, ensuring seamless
