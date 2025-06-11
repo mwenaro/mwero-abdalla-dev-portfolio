@@ -3,7 +3,7 @@ import { FiGithub, FiExternalLink, FiArrowLeft } from "react-icons/fi";
 import Link from "next/link";
 import { projects } from "@/constants/projects";
 
-export default async function ProjectDetails({ params }: {params:{id:any}}) {
+export default async function ProjectDetails({ params }: {params: Promise < {id: unknown} >}) {
   const {id} = await params;
   const project = projects.find((p) => p.id === id);
 
