@@ -1,12 +1,12 @@
-import { notFound } from 'next/navigation';
-import { FiGithub, FiExternalLink, FiArrowLeft } from 'react-icons/fi';
-import Link from 'next/link';
-import { projects } from '@/constants/projects';
+import { notFound } from "next/navigation";
+import { FiGithub, FiExternalLink, FiArrowLeft } from "react-icons/fi";
+import Link from "next/link";
+import { projects } from "@/constants/projects";
 
+export default async function ProjectDetails({ params }: any) {
+  const {id} = await params;
+  const project = projects.find((p) => p.id === id);
 
-export default function ProjectDetails({ params }: { params: { id: string } }) {
-  const project = projects.find(p => p.id === params.id);
-  
   if (!project) {
     return notFound();
   }
@@ -15,8 +15,8 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
     <div className="min-h-screen bg-[#121417] text-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Back Button */}
-        <Link 
-          href="/projects" 
+        <Link
+          href="/projects"
           className="flex items-center gap-2 text-[#a1abb5] hover:text-white mb-6 transition-colors"
         >
           <FiArrowLeft /> Back to Projects
@@ -25,28 +25,30 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
         {/* Project Header */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
           <div className="md:w-1/2">
-            <div 
+            <div
               className="w-full h-64 md:h-96 rounded-lg bg-center bg-cover bg-no-repeat"
               style={{ backgroundImage: `url(${project.image})` }}
             />
           </div>
-          
+
           <div className="md:w-1/2">
             <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-            <p className="text-lg text-[#a1abb5] mb-6">{project.details.overview}</p>
-            
+            <p className="text-lg text-[#a1abb5] mb-6">
+              {project.details.overview}
+            </p>
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag) => (
-                <span 
-                  key={tag} 
+                <span
+                  key={tag}
                   className="px-3 py-1 rounded-full bg-[#327fcc]/20 text-[#327fcc] text-sm"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            
+
             {/* Action Buttons */}
             <div className="flex gap-4 mb-8">
               {project.githubUrl && (
@@ -59,7 +61,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
                   <FiGithub /> View Code
                 </Link>
               )}
-              
+
               {project.liveUrl && (
                 <Link
                   href={project.liveUrl}
@@ -87,7 +89,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
               ))}
             </ul>
           </div>
-          
+
           <div className="bg-[#1d2125] p-6 rounded-lg border border-[#2b3036]">
             <h2 className="text-xl font-bold mb-4">Technologies</h2>
             <ul className="space-y-2">
@@ -122,7 +124,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
             <h2 className="text-xl font-bold mb-6">Screenshots</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.details.screenshots.map((screenshot, index) => (
-                <div 
+                <div
                   key={index}
                   className="h-64 bg-center bg-cover bg-no-repeat rounded-lg border border-[#2b3036]"
                   style={{ backgroundImage: `url(${screenshot})` }}
