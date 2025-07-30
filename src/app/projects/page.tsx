@@ -10,21 +10,46 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[#121417] text-white py-8 px-4 sm:px-6 lg:px-40">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
-        <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Projects</h1>
-          <p className="text-[#a1abb5] max-w-2xl">
-            Explore a selection of my recent projects, showcasing my skills in full-stack development. 
-            Each project includes a brief description, technologies used, and links to live demos and repositories.
-          </p>
+        {/* Hero Section */}
+        <section className="@container mb-12">
+          <div className="flex flex-col gap-8 @[864px]:flex-row @[864px]:items-center">
+            <div className="w-full @[480px]:min-w-[300px] @[864px]:w-2/5">
+              <div 
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all duration-300"
+                style={{
+                  backgroundImage: 'url("/mwero-passport.png")',
+                }}
+              />
+            </div>
+            <div className="flex flex-col gap-6 @[864px]:w-3/5 @[864px]:pl-8">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-3xl md:text-4xl font-bold text-white">My Projects</h1>
+                <div className="w-20 h-1 bg-blue-600 rounded"></div>
+                <p className="text-[#a1abb5] max-w-2xl">
+                  Explore a selection of my recent projects, showcasing my skills in full-stack development. 
+                  Each project includes a brief description, technologies used, and links to live demos and repositories.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <a href="#projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-all duration-300">
+                  View All Projects
+                </a>
+                <Link href="/contact" className="px-6 py-3 bg-transparent border border-gray-600 hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-300">
+                  Get In Touch
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        <section id="projects">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
