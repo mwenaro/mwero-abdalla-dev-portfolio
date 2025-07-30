@@ -73,16 +73,43 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#121417] text-white py-8 px-4 sm:px-6 lg:px-40">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
-        <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-[#a1abb5] max-w-2xl">
-            I&apos;m always open to discussing new projects, creative ideas, or
-            opportunities to be part of your visions. Feel free to reach out!
-          </p>
+        {/* Hero Section */}
+        <section className="@container mb-12">
+          <div className="flex flex-col gap-8 @[864px]:flex-row @[864px]:items-center">
+            <div className="w-full @[480px]:min-w-[300px] @[864px]:w-2/5">
+              <div 
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all duration-300"
+                style={{
+                  backgroundImage: 'url("/mwero-passport.png")',
+                }}
+              />
+            </div>
+            <div className="flex flex-col gap-6 @[864px]:w-3/5 @[864px]:pl-8">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-3xl md:text-4xl font-bold text-white">Let&apos;s Connect</h1>
+                <div className="w-20 h-1 bg-blue-600 rounded"></div>
+                <p className="text-[#a1abb5] max-w-2xl">
+                  I&apos;m always open to discussing new projects, creative ideas, or
+                  opportunities to be part of your visions. Feel free to reach out through
+                  the form below or schedule a call!
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <a href="#contact-form" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-all duration-300">
+                  Send Message
+                </a>
+                <button 
+                  onClick={() => setShowCalendly(!showCalendly)}
+                  className="px-6 py-3 bg-transparent border border-gray-600 hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-300"
+                >
+                  Schedule Call
+                </button>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" id="contact-form">
           {/* Contact Form */}
           <div className="bg-[#1d2125] rounded-xl border border-[#2b3036] p-6">
             <h2 className="text-xl font-bold mb-6">Send me a message</h2>

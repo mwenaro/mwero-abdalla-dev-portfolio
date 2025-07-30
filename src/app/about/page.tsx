@@ -12,23 +12,38 @@ export default function AboutPage() {
       <div className="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           {/* Hero Section */}
-          <section className="flex flex-col gap-6 p-4 mb-8">
-            <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
-              About Me
-            </h1>
-            <p className="text-[#a1abb5] text-base md:text-lg leading-relaxed">
-              I&apos;m a full-stack developer with 8+ years of experience creating innovative 
-              and user-friendly web applications. With expertise in both front-end and 
-              back-end technologies, I specialize in building performant, scalable 
-              solutions that deliver exceptional user experiences.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-2">
-              <Link href="#experience" className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-medium transition-colors">
-                My Experience
-              </Link>
-              <Link href="#skills" className="px-6 py-2 bg-transparent border border-gray-600 hover:bg-gray-800 rounded-md text-white font-medium transition-colors">
-                View Skills
-              </Link>
+          <section className="@container mb-12">
+            <div className="flex flex-col gap-8 @[864px]:flex-row @[864px]:items-center p-4">
+              <div className="w-full @[480px]:min-w-[300px] @[864px]:w-2/5">
+                <div 
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all duration-300"
+                  style={{
+                    backgroundImage: 'url("/mwero-passport.png")',
+                  }}
+                />
+              </div>
+              <div className="flex flex-col gap-6 @[864px]:w-3/5 @[864px]:pl-8">
+                <div className="flex flex-col gap-3">
+                  <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+                    About Me
+                  </h1>
+                  <div className="w-20 h-1 bg-blue-600 rounded"></div>
+                  <p className="text-[#a1abb5] text-base md:text-lg leading-relaxed">
+                    I&apos;m a full-stack developer with 8+ years of experience creating innovative 
+                    and user-friendly web applications. With expertise in both front-end and 
+                    back-end technologies, I specialize in building performant, scalable 
+                    solutions that deliver exceptional user experiences.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-4 mt-2">
+                  <Link href="#experience" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-all duration-300">
+                    My Experience
+                  </Link>
+                  <Link href="#skills" className="px-6 py-3 bg-transparent border border-gray-600 hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-300">
+                    View Skills
+                  </Link>
+                </div>
+              </div>
             </div>
           </section>
 
