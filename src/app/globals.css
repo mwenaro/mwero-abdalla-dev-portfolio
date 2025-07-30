@@ -114,12 +114,16 @@
   /* Dark theme portfolio colors */
   --portfolio-bg-primary: #0a0b0e;
   --portfolio-bg-secondary: #121417;
+  --portfolio-bg-card: #1d2125;
+  --portfolio-bg-hover: #2b3036;
   --portfolio-text-primary: #ffffff;
   --portfolio-text-secondary: #e5e7eb;
-  --portfolio-text-muted: #9ca3af;
-  --portfolio-border: #374151;
-  --portfolio-accent: #60a5fa;
-  --portfolio-accent-hover: #3b82f6;
+  --portfolio-text-muted: #a1abb5;
+  --portfolio-border: #3f4750;
+  --portfolio-border-hover: #327fcc;
+  --portfolio-accent: #327fcc;
+  --portfolio-accent-hover: #3a8cd6;
+  --portfolio-accent-light: #327fcc20;
   --portfolio-success: #34d399;
   --portfolio-warning: #fbbf24;
   --portfolio-error: #f87171;
@@ -130,16 +134,20 @@
   --portfolio-gradient-accent: linear-gradient(135deg, #60a5fa 0%, #8b5cf6 100%);
 }
 
-/* Light theme specific overrides */
-.light {
+/* Default light theme colors */
+:root {
   --portfolio-bg-primary: #ffffff;
   --portfolio-bg-secondary: #f8fafc;
+  --portfolio-bg-card: #ffffff;
+  --portfolio-bg-hover: #f1f5f9;
   --portfolio-text-primary: #1f2937;
   --portfolio-text-secondary: #4b5563;
   --portfolio-text-muted: #6b7280;
   --portfolio-border: #e5e7eb;
+  --portfolio-border-hover: #2563eb;
   --portfolio-accent: #2563eb;
   --portfolio-accent-hover: #1d4ed8;
+  --portfolio-accent-light: #dbeafe;
   --portfolio-success: #059669;
   --portfolio-warning: #d97706;
   --portfolio-error: #dc2626;
@@ -332,5 +340,87 @@
       transition: none !important;
       transform: none !important;
     }
+  }
+}
+
+/* Theme-aware placeholder and form styles */
+.theme-input::placeholder {
+  color: var(--portfolio-text-muted);
+  opacity: 0.7;
+}
+
+.theme-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Improved theme-aware utilities */
+@layer utilities {
+  /* Theme-aware text colors */
+  .text-theme-primary {
+    color: var(--portfolio-text-primary);
+  }
+  
+  .text-theme-secondary {
+    color: var(--portfolio-text-secondary);
+  }
+  
+  .text-theme-muted {
+    color: var(--portfolio-text-muted);
+  }
+  
+  .text-theme-accent {
+    color: var(--portfolio-accent);
+  }
+  
+  /* Theme-aware background colors */
+  .bg-theme-primary {
+    background-color: var(--portfolio-bg-primary);
+  }
+  
+  .bg-theme-secondary {
+    background-color: var(--portfolio-bg-secondary);
+  }
+  
+  .bg-theme-card {
+    background-color: var(--portfolio-bg-card);
+  }
+  
+  .bg-theme-hover {
+    background-color: var(--portfolio-bg-hover);
+  }
+  
+  /* Theme-aware border colors */
+  .border-theme {
+    border-color: var(--portfolio-border);
+  }
+  
+  .border-theme-hover {
+    border-color: var(--portfolio-border-hover);
+  }
+  
+  /* Theme-aware button styles */
+  .btn-theme-primary {
+    background-color: var(--portfolio-accent);
+    color: white;
+  }
+  
+  .btn-theme-primary:hover {
+    background-color: var(--portfolio-accent-hover);
+  }
+  
+  .btn-theme-secondary {
+    background-color: var(--portfolio-bg-card);
+    color: var(--portfolio-text-primary);
+    border: 1px solid var(--portfolio-border);
+  }
+  
+  .btn-theme-secondary:hover {
+    background-color: var(--portfolio-bg-hover);
+    border-color: var(--portfolio-border-hover);
   }
 }

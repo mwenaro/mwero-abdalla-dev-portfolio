@@ -150,7 +150,7 @@ export default function AboutPage() {
                     transition={{ duration: 1, delay: 0.5 }}
                   />
                   <motion.p 
-                    className="text-[#a1abb5] text-base md:text-lg leading-relaxed"
+                    className="text-portfolio-text-muted text-base md:text-lg leading-relaxed"
                     variants={fadeInUp}
                     transition={{ duration: 0.8, delay: 0.4 }}
                   >
@@ -232,7 +232,7 @@ export default function AboutPage() {
                     </motion.div>
                     {index !== experiences.length - 1 && (
                       <motion.div 
-                        className="w-[2px] bg-[#3f4750] h-full my-2"
+                        className="w-[2px] bg-portfolio-border h-full my-2"
                         initial={{ height: 0 }}
                         animate={{ height: "100%" }}
                         transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
@@ -249,7 +249,7 @@ export default function AboutPage() {
                       {exp.role} · {exp.company}
                     </h3>
                     <p className="text-blue-400 text-sm font-medium mb-3">{exp.period}</p>
-                    <p className="text-[#a1abb5] text-base leading-relaxed">
+                    <p className="text-portfolio-text-muted text-base leading-relaxed">
                       {exp.description}
                     </p>
                   </motion.div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
               {skills.map((skill, index) => (
                 <motion.div 
                   key={index}
-                  className="flex items-center justify-center gap-x-2 rounded-xl bg-[#2b3036] hover:bg-[#3a4149] px-4 py-2 transition-colors cursor-pointer"
+                  className="flex items-center justify-center gap-x-2 rounded-xl bg-portfolio-bg-card hover:bg-portfolio-bg-hover px-4 py-2 transition-colors cursor-pointer"
                   variants={scaleIn}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ 
@@ -345,7 +345,7 @@ export default function AboutPage() {
                     </motion.div>
                     {index !== education.length - 1 && (
                       <motion.div 
-                        className="w-[2px] bg-[#3f4750] h-full my-2"
+                        className="w-[2px] bg-portfolio-border h-full my-2"
                         initial={{ height: 0 }}
                         animate={{ height: "100%" }}
                         transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
@@ -358,17 +358,17 @@ export default function AboutPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
                   >
-                    <h3 className="text-white text-xl font-bold leading-normal mb-1">
+                    <h3 className="text-portfolio-text-primary text-xl font-bold leading-normal mb-1">
                       {edu.degree}
                     </h3>
-                    <p className="text-purple-400 text-sm font-medium mb-2">{edu.institution} · {edu.period}</p>
+                    <p className="text-portfolio-accent text-sm font-medium mb-2">{edu.institution} · {edu.period}</p>
                     {edu.thesis && (
-                      <p className="text-[#a1abb5] text-sm mb-1">
+                      <p className="text-portfolio-text-muted text-sm mb-1">
                         <span className="font-medium">Thesis:</span> {edu.thesis}
                       </p>
                     )}
                     {edu.honors && (
-                      <p className="text-[#a1abb5] text-sm">
+                      <p className="text-portfolio-text-muted text-sm">
                         <span className="font-medium">Honors:</span> {edu.honors}
                       </p>
                     )}
@@ -380,7 +380,7 @@ export default function AboutPage() {
 
           {/* Call to Action */}
           <motion.section 
-            className="p-6 bg-[#1e2227] rounded-lg mt-8 relative overflow-hidden"
+            className="p-6 bg-portfolio-bg-card rounded-lg mt-8 relative overflow-hidden"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -412,7 +412,7 @@ export default function AboutPage() {
             </motion.h3>
             
             <motion.p 
-              className="text-[#a1abb5] mb-6 relative z-10"
+              className="text-portfolio-text-muted mb-6 relative z-10"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}

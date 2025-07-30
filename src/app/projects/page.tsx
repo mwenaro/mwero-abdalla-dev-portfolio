@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   
 
   return (
-    <div className="min-h-screen bg-[#121417] text-white py-8 px-4 sm:px-6 lg:px-40">
+    <div className="min-h-screen bg-portfolio-bg-primary text-portfolio-text-primary py-8 px-4 sm:px-6 lg:px-40 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="@container mb-12">
@@ -23,18 +23,18 @@ export default function ProjectsPage() {
             </div>
             <div className="flex flex-col gap-6 @[864px]:w-3/5 @[864px]:pl-8">
               <div className="flex flex-col gap-3">
-                <h1 className="text-3xl md:text-4xl font-bold text-white">My Projects</h1>
+                <h1 className="text-3xl md:text-4xl font-bold text-portfolio-text-primary">My Projects</h1>
                 <div className="w-20 h-1 bg-blue-600 rounded"></div>
-                <p className="text-[#a1abb5] max-w-2xl">
+                <p className="text-portfolio-text-muted max-w-2xl">
                   Explore a selection of my recent projects, showcasing my skills in full-stack development. 
                   Each project includes a brief description, technologies used, and links to live demos and repositories.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <a href="#projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-all duration-300">
+                <a href="#projects" className="px-6 py-3 bg-portfolio-accent hover:bg-portfolio-accent-hover rounded-lg text-white font-medium transition-all duration-300">
                   View All Projects
                 </a>
-                <Link href="/contact" className="px-6 py-3 bg-transparent border border-gray-600 hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-300">
+                <Link href="/contact" className="px-6 py-3 bg-transparent border border-portfolio-border hover:bg-portfolio-bg-hover rounded-lg text-portfolio-text-primary font-medium transition-all duration-300">
                   Get In Touch
                 </Link>
               </div>
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg bg-[#1d2125] border border-[#2b3036] hover:border-[#327fcc] transition-all duration-300">
+    <div className="rounded-lg overflow-hidden shadow-lg bg-portfolio-bg-card border border-portfolio-border hover:border-portfolio-border-hover transition-all duration-300">
       {/* Project Image */}
       <div 
         className="w-full h-48 bg-center bg-cover bg-no-repeat"
@@ -68,7 +68,7 @@ function ProjectCard({ project }: { project: Project }) {
             {project.tags.map((tag) => (
               <span 
                 key={tag} 
-                className="text-xs px-2 py-1 rounded bg-[#327fcc]/20 text-[#327fcc]"
+                className="text-xs px-2 py-1 rounded bg-portfolio-accent-light text-portfolio-accent"
               >
                 {tag}
               </span>
@@ -80,7 +80,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Project Content */}
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-[#a1abb5] mb-4">{project.description}</p>
+        <p className="text-portfolio-text-muted mb-4">{project.description}</p>
         
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-3">
@@ -89,7 +89,7 @@ function ProjectCard({ project }: { project: Project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#2b3036] hover:bg-[#3a4149] text-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-md bg-portfolio-bg-hover hover:bg-portfolio-border text-portfolio-text-primary transition-colors"
             >
               <FiGithub /> Code
             </Link>
@@ -100,7 +100,7 @@ function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#327fcc] hover:bg-[#3a8cd6] text-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-md bg-portfolio-accent hover:bg-portfolio-accent-hover text-white transition-colors"
             >
               <FiExternalLink /> Live Demo
             </Link>
@@ -108,7 +108,7 @@ function ProjectCard({ project }: { project: Project }) {
           
           <Link
             href={`/projects/${project.id}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-md border border-[#3f4750] hover:bg-[#2b3036] text-white transition-colors ml-auto"
+            className="flex items-center gap-2 px-4 py-2 rounded-md border border-portfolio-border hover:bg-portfolio-bg-hover text-portfolio-text-primary transition-colors ml-auto"
           >
             Details <FiArrowRight />
           </Link>

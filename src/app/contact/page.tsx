@@ -71,7 +71,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#121417] text-white py-8 px-4 sm:px-6 lg:px-40">
+    <div className="min-h-screen bg-portfolio-bg-primary text-portfolio-text-primary py-8 px-4 sm:px-6 lg:px-40 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="@container mb-12">
@@ -88,7 +88,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-3">
                 <h1 className="text-3xl md:text-4xl font-bold text-white">Let&apos;s Connect</h1>
                 <div className="w-20 h-1 bg-blue-600 rounded"></div>
-                <p className="text-[#a1abb5] max-w-2xl">
+                <p className="text-portfolio-text-muted max-w-2xl">
                   I&apos;m always open to discussing new projects, creative ideas, or
                   opportunities to be part of your visions. Feel free to reach out through
                   the form below or schedule a call!
@@ -111,7 +111,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" id="contact-form">
           {/* Contact Form */}
-          <div className="bg-[#1d2125] rounded-xl border border-[#2b3036] p-6">
+          <div className="bg-portfolio-bg-card rounded-xl border border-portfolio-border p-6">
             <h2 className="text-xl font-bold mb-6">Send me a message</h2>
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
@@ -127,9 +127,9 @@ export default function ContactPage() {
                     name="name"
                     type="text"
                     placeholder="Enter your name"
-                    className={`w-full rounded-lg bg-[#2b3036] border ${
-                      errors.name ? "border-red-500" : "border-[#3f4750]"
-                    } p-3 text-white focus:outline-none focus:ring-2 focus:ring-[#327fcc]`}
+                    className={`theme-input w-full rounded-lg bg-portfolio-bg-hover border ${
+                      errors.name ? "border-red-500" : "border-portfolio-border"
+                    } p-3 text-portfolio-text-primary focus:outline-none focus:ring-2 focus:ring-portfolio-accent`}
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -150,9 +150,9 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     placeholder="Enter your email"
-                    className={`w-full rounded-lg bg-[#2b3036] border ${
-                      errors.email ? "border-red-500" : "border-[#3f4750]"
-                    } p-3 text-white focus:outline-none focus:ring-2 focus:ring-[#327fcc]`}
+                    className={`theme-input w-full rounded-lg bg-portfolio-bg-hover border ${
+                      errors.email ? "border-red-500" : "border-portfolio-border"
+                    } p-3 text-portfolio-text-primary focus:outline-none focus:ring-2 focus:ring-portfolio-accent`}
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -173,9 +173,9 @@ export default function ContactPage() {
                     name="subject"
                     type="text"
                     placeholder="Enter the subject"
-                    className={`w-full rounded-lg bg-[#2b3036] border ${
-                      errors.subject ? "border-red-500" : "border-[#3f4750]"
-                    } p-3 text-white focus:outline-none focus:ring-2 focus:ring-[#327fcc]`}
+                    className={`theme-input w-full rounded-lg bg-portfolio-bg-hover border ${
+                      errors.subject ? "border-red-500" : "border-portfolio-border"
+                    } p-3 text-portfolio-text-primary focus:outline-none focus:ring-2 focus:ring-portfolio-accent`}
                     value={formData.subject}
                     onChange={handleChange}
                   />
@@ -198,9 +198,9 @@ export default function ContactPage() {
                     name="message"
                     rows={5}
                     placeholder="Enter your message"
-                    className={`w-full rounded-lg bg-[#2b3036] border ${
-                      errors.message ? "border-red-500" : "border-[#3f4750]"
-                    } p-3 text-white focus:outline-none focus:ring-2 focus:ring-[#327fcc]`}
+                    className={`theme-input w-full rounded-lg bg-portfolio-bg-hover border ${
+                      errors.message ? "border-red-500" : "border-portfolio-border"
+                    } p-3 text-portfolio-text-primary focus:outline-none focus:ring-2 focus:ring-portfolio-accent`}
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
@@ -213,7 +213,7 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
-                  className="bg-[#327fcc] hover:bg-[#3a8cd6] text-white py-3 px-6 rounded-lg flex items-center gap-2"
+                  className="bg-portfolio-accent hover:bg-portfolio-accent-hover text-white py-3 px-6 rounded-lg flex items-center gap-2"
                   disabled={isSubmitting}
                 >
                   <FiSend />
@@ -226,50 +226,50 @@ export default function ContactPage() {
           {/* Contact Info and Calendly */}
           <div className="space-y-8">
             {/* Contact Information */}
-            <div className="bg-[#1d2125] rounded-xl border border-[#2b3036] p-6">
+            <div className="bg-portfolio-bg-card rounded-xl border border-portfolio-border p-6">
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="text-[#327fcc] mt-1">
+                  <div className="text-portfolio-accent mt-1">
                     <FiMail className="text-xl" />
                   </div>
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-[#a1abb5]">mweroabdalla@gmail.com</p>
+                    <p className="text-portfolio-text-muted">mweroabdalla@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="text-[#327fcc] mt-1">
+                  <div className="text-portfolio-accent mt-1">
                     <FiPhone className="text-xl" />
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-[#a1abb5]">+254 792982134</p>
+                    <p className="text-portfolio-text-muted">+254 792982134</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="text-[#327fcc] mt-1">
+                  <div className="text-portfolio-accent mt-1">
                     <FiMapPin className="text-xl" />
                   </div>
                   <div>
                     <h3 className="font-medium">Location</h3>
-                    <p className="text-[#a1abb5]">Mombasa, Kenya</p>
+                    <p className="text-portfolio-text-muted">Mombasa, Kenya</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Schedule Meeting */}
-            <div className="bg-[#1d2125] rounded-xl border border-[#2b3036] p-6">
+            <div className="bg-portfolio-bg-card rounded-xl border border-portfolio-border p-6">
               <h2 className="text-xl font-bold mb-6">Schedule a Meeting</h2>
-              <p className="text-[#a1abb5] mb-4">
+              <p className="text-portfolio-text-muted mb-4">
                 Book a time directly on my calendar for a video call or meeting.
               </p>
               <Button
                 onClick={() => setShowCalendly(!showCalendly)}
-                className="bg-[#327fcc] hover:bg-[#3a8cd6] text-white py-3 px-6 rounded-lg flex items-center gap-2 w-full"
+                className="bg-portfolio-accent hover:bg-portfolio-accent-hover text-white py-3 px-6 rounded-lg flex items-center gap-2 w-full"
               >
                 <FiCalendar />
                 {showCalendly ? "Hide Calendar" : "Show Calendar"}

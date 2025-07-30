@@ -8,7 +8,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="#">
               <div
-                className="text-[#a1abb5]"
+                className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors"
                 data-icon="LinkedinLogo"
                 data-size="24px"
                 data-weight="regular"
@@ -26,7 +26,7 @@ export function Footer() {
             </Link>
             <Link href="#">
               <div
-                className="text-[#a1abb5]"
+                className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors"
                 data-icon="TwitterLogo"
                 data-size="24px"
                 data-weight="regular"
@@ -44,7 +44,7 @@ export function Footer() {
             </Link>
             <Link href="#">
               <div
-                className="text-[#a1abb5]"
+                className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors"
                 data-icon="GithubLogo"
                 data-size="24px"
                 data-weight="regular"
@@ -61,7 +61,7 @@ export function Footer() {
               </div>
             </Link>
           </div>
-          <p className="text-[#a1abb5] text-base font-normal leading-normal">
+          <p className="text-portfolio-text-muted text-base font-normal leading-normal">
             © 2024 Mwero Abdalla. All rights reserved.
           </p>
         </div>
