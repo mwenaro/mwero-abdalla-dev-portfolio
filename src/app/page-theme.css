@@ -1,0 +1,72 @@
+/* Page-specific theme styles for better organization */
+.hero-card {
+  @apply border-portfolio-border bg-portfolio-bg-secondary;
+  background-image: var(--portfolio-gradient-card);
+}
+
+.hero-card:hover {
+  @apply border-portfolio-accent shadow-2xl;
+  box-shadow: 0 25px 50px -12px var(--portfolio-accent);
+}
+
+.profile-image {
+  @apply rounded-xl border-4 border-portfolio-border;
+  background-image: url("/mwero-passport.png");
+}
+
+.profile-image:hover {
+  @apply border-portfolio-accent scale-105;
+  box-shadow: 0 25px 50px -12px var(--portfolio-accent);
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-portfolio-text-primary;
+}
+
+.skill-badge {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer;
+  @apply bg-portfolio-bg-secondary text-portfolio-text-primary;
+  @apply hover:bg-portfolio-accent hover:text-white;
+  box-shadow: 0 2px 8px var(--portfolio-border);
+}
+
+.project-card {
+  @apply rounded-xl overflow-hidden shadow-lg relative group;
+  @apply bg-portfolio-bg-secondary border border-portfolio-border;
+}
+
+.project-card:hover {
+  @apply transform -translate-y-1;
+  box-shadow: 0 10px 30px var(--portfolio-border);
+}
+
+.cta-section {
+  @apply text-center py-16 px-8;
+  background: var(--portfolio-gradient-primary);
+}
+
+.btn-primary {
+  @apply inline-block px-6 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  @apply bg-portfolio-accent hover:bg-portfolio-accent-hover text-white;
+}
+
+.btn-secondary {
+  @apply inline-block px-6 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 border-2;
+  @apply border-portfolio-border hover:bg-portfolio-bg-secondary text-portfolio-text-primary;
+}
+
+.about-card {
+  @apply p-6 rounded-xl relative overflow-hidden;
+  @apply bg-portfolio-bg-secondary border border-portfolio-border;
+  background: var(--portfolio-gradient-card);
+}
+
+.floating-shape {
+  @apply w-4 h-4 rounded-full;
+  @apply bg-blue-500/10 dark:bg-blue-400/20;
+}
+
+.floating-shape-lg {
+  @apply w-4 h-4 rounded-full;
+  @apply bg-blue-500/20 dark:bg-blue-400/30;
+}

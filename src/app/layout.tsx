@@ -4,6 +4,10 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProdiver";
+import CursorFollower from "@/components/CursorFollower";
+import { LoadingProvider } from "@/contexts/LoadingContext";
+import { LoadingWrapper } from "@/components/LoadingWrapper";
+import PerformanceTestComponent from "@/components/PerformanceTestComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +32,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased md:cursor-none`}
       >
-        <ThemeProvider>
-          <div className="flex-col overflow-x-hidden bg-[#121417] font-[\'Space_Grotesk\',_\'Noto_Sans\',sans-serif] text-white px-4 md:px-8 lg:16">
-            <Header />
-            <main className="relative flex min-h-screen mt-12">{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <LoadingProvider>
+          <ThemeProvider>
+            <CursorFollower />
+            {process.env.NODE_ENV === "development" && <PerformanceTestComponent />}
+            <LoadingWrapper>
+              <div className="flex-col overflow-x-hidden bg-portfolio-bg-primary font-[\'Space_Grotesk\',_\'Noto_Sans\',sans-serif] text-portfolio-text-primary px-4 md:px-8 lg:16 transition-colors duration-300">
+                <Header />
+                <main className="relative flex min-h-screen mt-12">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+            </LoadingWrapper>
+          </ThemeProvider>
+        </LoadingProvider>
       </body>
     </html>
   );
