@@ -110,6 +110,44 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  /* Dark theme portfolio colors */
+  --portfolio-bg-primary: #0a0b0e;
+  --portfolio-bg-secondary: #121417;
+  --portfolio-text-primary: #ffffff;
+  --portfolio-text-secondary: #e5e7eb;
+  --portfolio-text-muted: #9ca3af;
+  --portfolio-border: #374151;
+  --portfolio-accent: #60a5fa;
+  --portfolio-accent-hover: #3b82f6;
+  --portfolio-success: #34d399;
+  --portfolio-warning: #fbbf24;
+  --portfolio-error: #f87171;
+  
+  /* Dark gradient backgrounds */
+  --portfolio-gradient-primary: linear-gradient(135deg, #0a0b0e 0%, #121417 100%);
+  --portfolio-gradient-card: linear-gradient(135deg, #121417 0%, #1f2937 100%);
+  --portfolio-gradient-accent: linear-gradient(135deg, #60a5fa 0%, #8b5cf6 100%);
+}
+
+/* Light theme specific overrides */
+.light {
+  --portfolio-bg-primary: #ffffff;
+  --portfolio-bg-secondary: #f8fafc;
+  --portfolio-text-primary: #1f2937;
+  --portfolio-text-secondary: #4b5563;
+  --portfolio-text-muted: #6b7280;
+  --portfolio-border: #e5e7eb;
+  --portfolio-accent: #2563eb;
+  --portfolio-accent-hover: #1d4ed8;
+  --portfolio-success: #059669;
+  --portfolio-warning: #d97706;
+  --portfolio-error: #dc2626;
+  
+  /* Light gradient backgrounds */
+  --portfolio-gradient-primary: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --portfolio-gradient-card: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --portfolio-gradient-accent: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
 }
 
 @layer base {
@@ -118,5 +156,181 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  /* GPU acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Disable animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    /* Reduce blur effects on mobile */
+    .backdrop-blur-md {
+      backdrop-filter: blur(8px);
+    }
+    
+    /* Simplify shadows on mobile */
+    .shadow-2xl {
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    
+    /* Optimize transforms for mobile */
+    .transform {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+  /* Low-performance device optimizations */
+  @media (max-width: 640px) and (max-height: 896px) {
+    /* Disable complex animations on small mobile devices */
+    .complex-animation {
+      animation: none !important;
+      transform: none !important;
+    }
+    
+    /* Reduce filter effects */
+    .blur-3xl {
+      filter: blur(20px);
+    }
+    
+    /* Simplify gradients */
+    .bg-gradient-to-r,
+    .bg-gradient-to-t,
+    .bg-gradient-to-tr {
+      background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    }
+  }
+
+  /* Touch-friendly button sizing */
+  @media (max-width: 768px) {
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Reduce motion for battery saving */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-spin {
+      animation: none;
+    }
+    
+    .animate-pulse {
+      animation: none;
+    }
+    
+    .animate-bounce {
+      animation: none;
+    }
+  }
+
+  /* Performance optimizations for GPU acceleration */
+  .gpu-accelerated {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    /* Simplify complex animations on mobile */
+    .reduce-on-mobile {
+      animation-duration: 0.3s !important;
+      transition-duration: 0.3s !important;
+    }
+    
+    /* Reduce transforms that can cause repaints */
+    .mobile-simple {
+      transform: none !important;
+    }
+    
+    /* Optimize touch interactions */
+    .touch-optimized {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+  }
+
+  /* Low performance device optimizations */
+  @media (max-width: 768px) and (max-resolution: 150dpi) {
+    /* Disable complex effects on low-end mobile devices */
+    .disable-on-low-end {
+      display: none !important;
+    }
+    
+    .simplify-on-low-end {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+
+  /* Battery saving mode */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Optimize animations for better performance */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .will-change-auto {
+    will-change: auto;
+  }
+
+  /* Force hardware acceleration for smooth animations */
+  .force-gpu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Reduce motion specifically for cursor and floating elements */
+  @media (prefers-reduced-motion: reduce) {
+    [data-cursor-follower],
+    [data-floating-element],
+    [data-particle-effect] {
+      display: none !important;
+    }
+  }
+
+  /* Mobile-first responsive optimizations */
+  @media (hover: none) and (pointer: coarse) {
+    /* Hide hover-dependent elements on touch devices */
+    .hover-only {
+      display: none !important;
+    }
+    
+    /* Simplify interactions on touch devices */
+    .touch-simplified {
+      transition: none !important;
+      transform: none !important;
+    }
   }
 }
